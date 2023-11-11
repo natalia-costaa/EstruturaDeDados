@@ -5,19 +5,20 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 import tech.angelofdiasg.composicao.Endereco;
+import tech.angelofdiasg.composicao.Telefone;
 
 public class Pessoa {
 	
 	private String nome;
 	private String dataNascimento;
 	private Endereco endereco;
-	private String telsContato;
+	private Telefone telsContato;
 
 	
 	public Pessoa() {
 	}
 	
-	public void cadastrar(String nome, String dataNascimento, Endereco endereco, String telsContato) {
+	public void cadastrar(String nome, String dataNascimento, Endereco endereco, Telefone telsContato) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.endereco = endereco;
@@ -44,7 +45,7 @@ public class Pessoa {
 		return endereco;
 	}
 
-	public String getTelsContato() {
+	public Telefone getTelsContato() {
 		return telsContato;
 	}
 
@@ -60,7 +61,7 @@ public class Pessoa {
 		this.endereco = endereco;
 	}
 
-	public void setTelsContato(String telsContato) {
+	public void setTelsContato(Telefone telsContato) {
 		this.telsContato = telsContato;
 	}
 	

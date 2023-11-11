@@ -1,6 +1,7 @@
 package tech.angelofdiasg.pessoas;
 
 import tech.angelofdiasg.composicao.Endereco;
+import tech.angelofdiasg.composicao.Telefone;
 
 public class Cliente extends Pessoa {
 	
@@ -9,7 +10,7 @@ public class Cliente extends Pessoa {
 	
 		
 	public void cadastrar(String codigo, String nome, String dataNascimento, 
-			Endereco endereco, String telsContato, String profissao) {
+			Endereco endereco, Telefone telsContato, String profissao) {
 		this.codigo = codigo;
 		setNome(nome);
 		setDataNascimento(dataNascimento);
