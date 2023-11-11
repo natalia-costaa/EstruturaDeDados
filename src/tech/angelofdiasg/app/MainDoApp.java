@@ -3,7 +3,6 @@ package tech.angelofdiasg.app;
 import tech.angelofdiasg.composicao.Endereco;
 import tech.angelofdiasg.pessoas.Cliente;
 import tech.angelofdiasg.pessoas.Funcionario;
-//import tech.angelofdiasg.contas.Conta;
 
 
 public class MainDoApp {
@@ -16,7 +15,7 @@ public class MainDoApp {
 		endCliente.cadastrarEnd("Av Epitacio Pessoa", "41", "1111", "JP","PB","BR");
 
 		Funcionario funcionario1 = new Funcionario();
-		funcionario1.cadastrar("Pedro", "02/02/1987", endFunc, "222222", 12345, 12000.2 ,"03/03/2000","líder");
+		funcionario1.cadastrar("Pedro", "02/02/1987", endFunc, "222222", 12345, 1000.2 ,"03/03/2000","líder");
 		
 		Cliente cliente2 = new Cliente();
 		cliente2.cadastrar("X12", "Ana", "01/01/1986", endCliente, "454545", "Desenvolvedor");
@@ -28,6 +27,9 @@ public class MainDoApp {
 		System.out.println("\n" + funcionario1.getNome() + " mora na" + funcionario1.getEndereco());
 		
 		System.out.println(cliente2.getCodigo() + " mora na" + cliente2.getEndereco());
+		
+		funcionario1.reajustarSalario(12.5);
+		System.out.println("O novo salario de " + funcionario1.getNome()+ " é " + funcionario1.getSalario());
 
 	}
 
