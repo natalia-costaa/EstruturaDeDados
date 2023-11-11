@@ -1,12 +1,14 @@
 package tech.angelofdiasg.pessoas;
 
+import tech.angelofdiasg.composicao.Endereco;
+
 public class Cliente extends Pessoa {
 	
 	private String codigo;
 	private String profissao;
 	
 	
-	public void cadastrar(String nome, String dataNascimento, String endereco, String telsContato, String codigo, String profissao) {
+	public void cadastrar(String nome, String dataNascimento, Endereco endereco, String telsContato, String codigo, String profissao) {
 		setNome(nome);
 		setDataNascimento(dataNascimento);
 		setEndereco(endereco);

@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
+import tech.angelofdiasg.composicao.Endereco;
+
 public class Funcionario extends Pessoa {
 	
 	private Integer matricula;
@@ -11,7 +13,7 @@ public class Funcionario extends Pessoa {
 	private String dataAdmissao;
 	private String cargo;
 	
-	public void cadastrar(String nome, String dataNascimento, String endereco, 
+	public void cadastrar(String nome, String dataNascimento, Endereco endereco, 
 			String telsContato, Integer matricula, Double salario, String dataAdmissao, String cargo) {
 		setNome(nome);
 		setDataNascimento(dataNascimento);
@@ -35,7 +37,7 @@ public class Funcionario extends Pessoa {
 	}
 	
 	public double reajustarSalario(double percentual) {
-		return this.salario = this.salario * percentual;
+		return this.salario = this.salario + ( this.salario * (percentual/100));
 	}
 		
 	public Integer getMatricula() {
