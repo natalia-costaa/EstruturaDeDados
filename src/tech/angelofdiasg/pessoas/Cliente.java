@@ -7,13 +7,14 @@ public class Cliente extends Pessoa {
 	private String codigo;
 	private String profissao;
 	
-	
-	public void cadastrar(String nome, String dataNascimento, Endereco endereco, String telsContato, String codigo, String profissao) {
+		
+	public void cadastrar(String codigo, String nome, String dataNascimento, 
+			Endereco endereco, String telsContato, String profissao) {
+		this.codigo = codigo;
 		setNome(nome);
 		setDataNascimento(dataNascimento);
 		setEndereco(endereco);
 		setTelsContato(telsContato);
-		this.codigo = codigo;
 		this.profissao = profissao;
 	}
 	

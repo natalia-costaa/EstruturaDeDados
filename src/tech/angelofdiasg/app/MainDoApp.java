@@ -19,13 +19,15 @@ public class MainDoApp {
 		funcionario1.cadastrar("Pedro", "02/02/1987", endFunc, "222222", 12345, 12000.2 ,"03/03/2000","líder");
 		
 		Cliente cliente2 = new Cliente();
-		cliente2.cadastrar("Ana", "01/01/1986", endCliente, "454545");
+		cliente2.cadastrar("X12", "Ana", "01/01/1986", endCliente, "454545", "Desenvolvedor");
 				
 		System.out.printf("O funcionario %s tem %d anos e trabalha há %d anos na empresa.", 
 				funcionario1.getNome(), funcionario1.obterIdade(), funcionario1.tempoServico());
 			
 		
 		System.out.println("\n" + funcionario1.getNome() + " mora na" + funcionario1.getEndereco());
+		
+		System.out.println(cliente2.getCodigo() + " mora na" + cliente2.getEndereco());
 
 	}
 
