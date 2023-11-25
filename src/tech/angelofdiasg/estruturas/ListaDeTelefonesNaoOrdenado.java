@@ -51,11 +51,9 @@ public class ListaDeTelefonesNaoOrdenado {
 	}
 
 	 public void exibirTelefones() {
-	    for (int i = 0; i < size; i++) {
-	            System.out.println(telefones[i]);
+		 for (int i = 0; i < size; i++) {
+	         System.out.println(telefones[i]);
 	    }
 	}
-
-	
 
 }

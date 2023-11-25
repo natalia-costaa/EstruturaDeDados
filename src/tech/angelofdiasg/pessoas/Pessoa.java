@@ -5,24 +5,24 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 import tech.angelofdiasg.composicao.Endereco;
-import tech.angelofdiasg.composicao.Telefone;
+import tech.angelofdiasg.estruturas.ListaDeTelefonesNaoOrdenado;
 
 public class Pessoa {
 	
 	private String nome;
 	private String dataNascimento;
 	private Endereco endereco;
-	private Telefone telsContato;
+	private ListaDeTelefonesNaoOrdenado listaTelsContato;
 
 	
 	public Pessoa() {
 	}
 	
-	public void cadastrar(String nome, String dataNascimento, Endereco endereco, Telefone telsContato) {
+	public void cadastrar(String nome, String dataNascimento, Endereco endereco, ListaDeTelefonesNaoOrdenado listaTelsContato) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.endereco = endereco;
-		this.telsContato = telsContato;
+		this.listaTelsContato = listaTelsContato;
 	}
 	
 	public int obterIdade() {
@@ -45,10 +45,6 @@ public class Pessoa {
 		return endereco;
 	}
 
-	public Telefone getTelsContato() {
-		return telsContato;
-	}
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
@@ -61,10 +57,15 @@ public class Pessoa {
 		this.endereco = endereco;
 	}
 
-	public void setTelsContato(Telefone telsContato) {
-		this.telsContato = telsContato;
+	public ListaDeTelefonesNaoOrdenado getListaTelsContato() {
+		return listaTelsContato;
 	}
-	
+
+	public void setListaTelsContato(ListaDeTelefonesNaoOrdenado listaTelsContato) {
+		this.listaTelsContato = listaTelsContato;
+	}
+
+
 	
 	
 }

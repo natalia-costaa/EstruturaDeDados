@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 import tech.angelofdiasg.composicao.Endereco;
-import tech.angelofdiasg.composicao.Telefone;
+import tech.angelofdiasg.estruturas.ListaDeTelefonesNaoOrdenado;
 
 public class Funcionario extends Pessoa {
 	
@@ -15,11 +15,11 @@ public class Funcionario extends Pessoa {
 	private String cargo;
 	
 	public void cadastrar(String nome, String dataNascimento, Endereco endereco, 
-			Telefone telsContato, Integer matricula, Double salario, String dataAdmissao, String cargo) {
+			ListaDeTelefonesNaoOrdenado listaTelsContato, Integer matricula, Double salario, String dataAdmissao, String cargo) {
 		setNome(nome);
 		setDataNascimento(dataNascimento);
 		setEndereco(endereco);
-		setTelsContato(telsContato);
+		setListaTelsContato(listaTelsContato);
 		this.matricula = matricula;
 		this.salario = salario;
 		this.dataAdmissao = dataAdmissao;
