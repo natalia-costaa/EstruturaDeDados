@@ -9,8 +9,7 @@ public class ListaDeTelefonesNaoOrdenado {
 	private static final int CAPACIDADE_PADRAO = 10;
 
 	
-		
-	public ListaDeTelefonesNaoOrdenado(Telefone[] telefones) {
+	public ListaDeTelefonesNaoOrdenado() {
 		this.telefones = new Telefone[CAPACIDADE_PADRAO];
 		size = 0;
 	}
@@ -26,7 +25,7 @@ public class ListaDeTelefonesNaoOrdenado {
 	private void garantirCapacidade() {
 		int novaCapacidade = telefones.length * 2;
 		Telefone[] listaDeTelefones = new Telefone[novaCapacidade];
-		for(int i = 1; i < size; i++) {
+		for(int i = 0; i < size; i++) {
 			listaDeTelefones[i] = telefones[i];
 		}
 		
@@ -34,10 +33,28 @@ public class ListaDeTelefonesNaoOrdenado {
 	}
 	
 	public void addTelefoneNoSQL(Telefone telefone) {
+		if(size == telefones.length) {
+			garantirCapacidade();
+		}
 		
+		telefones[size] = telefone;
+		this.size = size + 1;
 	}
 	
-	
+	public void removerTelefone(Telefone telefone) {
+		for(int i = 0; i < size; i++) {
+			if (telefones[i] == telefone) {
+				telefones[i] = telefones[i+1];
+			}
+		}
+		  telefones[size - 1] = null;
+	}
+
+	 public void exibirTelefones() {
+	    for (int i = 0; i < size; i++) {
+	            System.out.println(telefones[i]);
+	    }
+	}
 
 	
 
