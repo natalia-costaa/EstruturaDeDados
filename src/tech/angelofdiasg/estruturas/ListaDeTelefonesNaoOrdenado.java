@@ -18,6 +18,7 @@ public class ListaDeTelefonesNaoOrdenado {
 	public boolean isEmpty() {
 		return tamanho == 0;
 	}
+
 	
 	public boolean isFull() {
 		return tamanho == telefones.length;
